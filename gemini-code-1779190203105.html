@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulsi Barman | Portfolio & Student Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Custom typing cursor effect */
+        .typing-text::after {
+            content: '|';
+            animation: blink 0.8s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-wider bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">
+                TULSI BARMAN
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex items-center gap-6 font-medium text-sm">
+                    <a href="#about" class="hover:text-emerald-500 transition-colors">About</a>
+                    <a href="#tools" class="hover:text-emerald-500 transition-colors">Smart Tools</a>
+                    <a href="#contact" class="hover:text-emerald-500 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Dark/Light Mode Toggle Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fas fa-moon text-cyan-600 dark:text-emerald-400 text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 px-4 overflow-hidden">
+        <!-- Background Decorative Orbs -->
+        <div class="absolute top-1/4 left-1/4 -z-10 w-72 h-72 bg-emerald-400/20 dark:bg-emerald-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 -z-10 w-80 h-80 bg-cyan-400/20 dark:bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-3xl text-center space-y-6">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-900/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Open to Learn & Create
+            </span>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                Hi, I'm <span class="bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">Tulsi Barman</span>
+            </h1>
+            
+            <div class="text-xl sm:text-2xl font-medium text-slate-600 dark:text-slate-400 h-8">
+                I am a <span id="typing-element" class="typing-text text-slate-800 dark:text-slate-200 font-semibold border-b-2 border-emerald-500"></span>
+            </div>
+            
+            <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+                Welcome to my portfolio. I am driven by structural learning, effective communication, and building dynamic digital content.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="#tools" class="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-medium shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 transform hover:-translate-y-0.5 transition-all text-center">
+                    Use Smart Tools
+                </a>
+                <a href="#contact" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all text-center">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-slate-100/50 dark:bg-slate-950/20 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">About Me</h2>
+                <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-cyan-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Academic Card -->
+                <div class="lg:col-span-2 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm space-y-6">
+                    <div class="flex items-center gap-4 text-emerald-500">
+                        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl">
+                            <i class="fas fa-user-graduate text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Academic Profile</h3>
+                            <p class="text-xs text-slate-400">Student Information Details</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <span class="block text-xs text-slate-400 mb-0.5">College Name</span>
+                            <span class="font-semibold">Surya Sen Mahavidyalaya</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <span class="block text-xs text-slate-400 mb-0.5">Course & Department</span>
+                            <span class="font-semibold">BA.GEN (BA. Bangla)</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <span class="block text-xs text-slate-400 mb-0.5">Year / Semester</span>
+                            <span class="font-semibold">2nd Year / 4th Semester</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <span class="block text-xs text-slate-400 mb-0.5">Session & Roll Number</span>
+                            <span class="font-semibold">2024-2025 | 24AGO454</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <h4 class="font-semibold mb-2 flex items-center gap-2 text-sm"><i class="fas fa-bullseye text-cyan-500"></i> Career Objective</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed bg-slate-50 dark:bg-slate-900/30 p-4 rounded-xl italic">
+                            "To learn new skills and gain experience while building a successful career and improving my creativity."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skills & Languages Card -->
+                <div class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fas fa-star text-amber-500"></i> Key Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 rounded-lg text-xs font-medium border border-emerald-100 dark:border-emerald-900/30">Basic Computer</span>
+                            <span class="px-3 py-1.5 bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400 rounded-lg text-xs font-medium border border-cyan-100 dark:border-cyan-900/30">Communication Skills</span>
+                            <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 rounded-lg text-xs font-medium border border-blue-100 dark:border-blue-900/30">Content Creation Interest</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-200 dark:border-slate-700">
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fas fa-language text-indigo-500"></i> Languages</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-sm">
+                                <span>Bengali</span>
+                                <span class="text-xs text-slate-400 font-medium">Native / Fluent</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-emerald-500 to-cyan-500 h-full w-[95%]"></div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center text-sm pt-2">
+                                <span>Hindi</span>
+                                <span class="text-xs text-slate-400 font-medium">Conversational</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-emerald-500 to-cyan-500 h-full w-[75%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMART STUDENT UTILITY HUB -->
+    <section id="tools" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 px-3 py-1 rounded-full">Utilities</span>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mt-3">Smart Student Utility Hub</h2>
+                <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-cyan-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tool 1: GPA Calculator -->
+                <div class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white mb-6 shadow-md shadow-emerald-500/10">
+                            <i class="fas fa-calculator text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">GPA / CGPA Calculator</h3>
+                        <p class="text-sm text-slate-400 mb-6">Convert your academic CGPA directly into percentage using the Indian University standard formula.</p>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label for="cgpa-input" class="block text-xs font-semibold mb-2 text-slate-400 uppercase tracking-wider">Enter CGPA (0 to 10)</label>
+                                <input type="number" id="cgpa-input" min="0" max="10" step="0.01" placeholder="e.g., 8.2" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-emerald-500 transition-colors">
+                            </div>
+                            <button id="calc-btn" class="w-full py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all">
+                                Calculate Percentage
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="gpa-result" class="mt-6 p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 hidden text-center">
+                        <span class="text-xs text-slate-400 block mb-1">Your Calculated Percentage</span>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent" id="percentage-output">0%</span>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Live Word Counter -->
+                <div class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white mb-6 shadow-md shadow-cyan-500/10">
+                            <i class="fas fa-file-alt text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Assignment Word Counter</h3>
+                        <p class="text-sm text-slate-400 mb-6">Track your writing character and word limits in real-time. Ideal for assignments and content drafts.</p>
+                        
+                        <textarea id="counter-textarea" rows="4" placeholder="Type or paste your text here..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-cyan-500 transition-colors resize-none mb-4"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
+                            <span class="block text-2xl font-bold text-cyan-500" id="word-count">0</span>
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Words</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
+                            <span class="block text-2xl font-bold text-emerald-500" id="char-count">0</span>
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-slate-100/50 dark:bg-slate-950/20 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get In Touch</h2>
+                        <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-cyan-600 mt-3 rounded-full"></div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Have a project in mind, an opportunity, or just want to connect? Reach out using the information below.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <a href="tel:+918637390033" class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors group">
+                            <i class="fas fa-phone-alt text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <span class="block text-xs text-slate-400">Call / WhatsApp</span>
+                                <span class="text-sm font-semibold">+91 8637390033</span>
+                            </div>
+                        </a>
+                        <a href="mailto:tulsibarman447@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-colors group">
+                            <i class="fas fa-envelope text-cyan-500 group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <span class="block text-xs text-slate-400">Email Address</span>
+                                <span class="text-sm font-semibold text-break">tulsibarman447@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-md">
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="form-name" class="block text-xs font-semibold mb-2 uppercase tracking-wider text-slate-400">Your Name</label>
+                            <input type="text" id="form-name" required placeholder="Your Full Name" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div>
+                            <label for="form-message" class="block text-xs font-semibold mb-2 uppercase tracking-wider text-slate-400">Message</label>
+                            <textarea id="form-message" rows="4" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-emerald-500 transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold shadow-lg shadow-emerald-500/15 hover:shadow-xl hover:shadow-emerald-500/25 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Tulsi Barman. All rights reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. DARK/LIGHT MODE TOGGLE ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIcon.className = 'fas fa-sun text-amber-400 text-lg';
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.className = 'fas fa-moon text-cyan-600 text-lg';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fas fa-moon text-cyan-600 text-lg';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fas fa-sun text-amber-400 text-lg';
+            }
+        });
+
+        // --- 2. LOOPING TYPING ANIMATION ---
+        const words = ["College Student", "BA Bangla Profile", "Creative Content Creator"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typing-element').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typing-element').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 60);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        // --- 3. TOOL 1: GPA / CGPA CALCULATOR ---
+        document.getElementById('calc-btn').addEventListener('click', () => {
+            const cgpaInput = document.getElementById('cgpa-input').value;
+            const cgpa = parseFloat(cgpaInput);
+            const resultDiv = document.getElementById('gpa-result');
+            const outputSpan = document.getElementById('percentage-output');
+
+            if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) {
+                alert('Please enter a valid CGPA between 0 and 10');
+                resultDiv.classList.add('hidden');
+                return;
+            }
+
+            // Indian standard formula: (CGPA - 0.75) * 10
+            let percentage = (cgpa - 0.75) * 10;
+            if (percentage < 0) percentage = 0;
+
+            outputSpan.textContent = percentage.toFixed(2) + '%';
+            resultDiv.classList.remove('hidden');
+        });
+
+        // --- 4. TOOL 2: LIVE WORD COUNTER ---
+        const textarea = document.getElementById('counter-textarea');
+        const wordCountSpan = document.getElementById('word-count');
+        const charCountSpan = document.getElementById('char-count');
+
+        textarea.addEventListener('input', () => {
+            const text = textarea.value.trim();
+            charCountSpan.textContent = textarea.value.length;
+            
+            if (text === '') {
+                wordCountSpan.textContent = '0';
+            } else {
+                const wordsArray = text.split(/\s+/);
+                wordCountSpan.textContent = wordsArray.length;
+            }
+        });
+
+        // --- 5. CONTACT FORM MOCK SUBMISSION ---
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            alert(`Thank you, ${name}! Your message has been sent successfully to Tulsi Barman (Mock Alert).`);
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+</body>
+</html>
